@@ -33,9 +33,7 @@
 
     --borderRadiusGeneral: 0.8rem;
     --borderRadius: 0.25rem;
-
-    --transition: 0.25s all ease-in-out;
-
+    
     --shadowColor: rgba(245, 245, 246, 1);
 
     --width-viewport-mobile: 425px;

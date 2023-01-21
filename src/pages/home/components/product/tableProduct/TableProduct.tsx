@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { IconButton, TableCell, useTheme } from '@mui/material'
+import { IconButton, TableCell, Tooltip, useTheme } from '@mui/material'
 import { Icon } from '@iconify/react';
 import trash2Outline from '@iconify/icons-eva/trash-2-outline'
 import editFill from '@iconify/icons-eva/edit-fill'
@@ -51,7 +51,9 @@ export default function TableProduct(props: Props) {
                             modalContext.open()
                         }}
                     >
-                        <Icon color={theme.palette.info.main} icon={baselineRemoveRedEye} width={24} height={24} />
+                        <Tooltip title="To select">
+                            <Icon color={theme.palette.info.main} icon={baselineRemoveRedEye} width={24} height={24} />
+                        </Tooltip>
                     </IconButton >
                 </TableCell>
                 <TableCell padding='checkbox'>
@@ -63,7 +65,9 @@ export default function TableProduct(props: Props) {
                             modalContext.open()
                         }}
                     >
-                        <Icon color={theme.palette.primary.main} icon={editFill} width={24} height={24} />
+                        <Tooltip title="Edit">
+                            <Icon color={theme.palette.primary.main} icon={editFill} width={24} height={24} />
+                        </Tooltip>
                     </IconButton >
                 </TableCell>
                 <TableCell padding='checkbox'>
@@ -75,7 +79,9 @@ export default function TableProduct(props: Props) {
                             modalContext.open()
                         }}
                     >
-                        <Icon color={theme.palette.error.main} icon={trash2Outline} width={24} height={24} />
+                        <Tooltip title="Delete">
+                            <Icon color={theme.palette.error.main} icon={trash2Outline} width={24} height={24} />
+                        </Tooltip>
                     </IconButton >
                 </TableCell>
             </>
